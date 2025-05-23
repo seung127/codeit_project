@@ -1,0 +1,5 @@
+고급프로젝트/
+__pycache__/
+*.pyc
+codeit_project/
+고급프로젝트_데이터(parquet)/
