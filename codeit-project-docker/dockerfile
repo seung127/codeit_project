@@ -9,7 +9,8 @@ RUN pip install --no-cache-dir \
     google-cloud-bigquery-storage \    
     gcsfs \
     db-dtypes \
-    jupyterlab
+    jupyterlab \
+    apt update && apt install -y fonts-nanum
 
 
 WORKDIR /workspace

@@ -8,8 +8,13 @@ services:
       - "8888:8888"
     volumes:
       - .:/workspace
+    logging:
+      driver: "none"
     environment:
       GOOGLE_APPLICATION_CREDENTIALS: "/workspace/config/key.json"
+    mem_limit: 8g           
+    memswap_limit: 10g      
+    cpus: 2.0               
     command: >
       jupyter lab
       --ip=0.0.0.0
