@@ -3,3 +3,6 @@ config/key.json
 __pycache__/
 .ipynb_checkpoints/
 config/codeit_project_vm_key.json
+
+# codeit-project-docker 폴더 내 config 폴더 전체 무시
+codeit-project-docker/config/
