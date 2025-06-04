@@ -6,3 +6,6 @@ config/codeit_project_vm_key.json
 
 # codeit-project-docker 폴더 내 config 폴더 전체 무시
 codeit-project-docker/config/
+
+# data/ 폴더 안에 있는 parquet 파일도 안올라가도록 무시
+data/
