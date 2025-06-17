@@ -1,24 +1,11 @@
-version: "3"
-
 services:
-  jupyter:
-    build: .
-    container_name: jupyter-lab
+  mysql:
+    image: mysql
+    container_name: mysql_db
     ports:
-      - "8888:8888"
-    volumes:
-      - .:/workspace
-    logging:
-      driver: "none"
+      - "3300:3306"
     environment:
-      GOOGLE_APPLICATION_CREDENTIALS: "/workspace/config/key.json"
-    mem_limit: 8g           
-    memswap_limit: 10g      
-    cpus: 2.0               
-    command: >
-      jupyter lab
-      --ip=0.0.0.0
-      --port=8888
-      --allow-root
-      --no-browser
-      --ServerApp.token="mysecuretoken"
+      - MYSQL_ROOT_PASSWORD=123456
+      - MYSQL_USER=codeit
+      - MYSQL_PASSWORD=sprint
+      - MYSQL_DATABASE=docker_mysql
