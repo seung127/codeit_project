@@ -1,0 +1,46 @@
+[2025-06-18T15:30:03.064+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2025-06-18T15:30:03.108+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: check_gcs_files_dag.list_gcs_file_names manual__2025-06-18T15:30:01.061190+00:00 [queued]>
+[2025-06-18T15:30:03.121+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: check_gcs_files_dag.list_gcs_file_names manual__2025-06-18T15:30:01.061190+00:00 [queued]>
+[2025-06-18T15:30:03.122+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 1
+[2025-06-18T15:30:03.147+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): list_gcs_file_names> on 2025-06-18 15:30:01.061190+00:00
+[2025-06-18T15:30:03.172+0000] {warnings.py:110} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61: DeprecationWarning: This process (pid=76) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-06-18T15:30:03.180+0000] {standard_task_runner.py:63} INFO - Started process 77 to run task
+[2025-06-18T15:30:03.179+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'check_gcs_files_dag', 'list_gcs_file_names', 'manual__2025-06-18T15:30:01.061190+00:00', '--job-id', '43', '--raw', '--subdir', 'DAGS_FOLDER/check_gcs_files_dag.py', '--cfg-path', '/tmp/tmp25t9ykza']
+[2025-06-18T15:30:03.187+0000] {standard_task_runner.py:91} INFO - Job 43: Subtask list_gcs_file_names
+[2025-06-18T15:30:03.294+0000] {task_command.py:426} INFO - Running <TaskInstance: check_gcs_files_dag.list_gcs_file_names manual__2025-06-18T15:30:01.061190+00:00 [running]> on host 9d2be549d26b
+[2025-06-18T15:30:03.452+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='check_gcs_files_dag' AIRFLOW_CTX_TASK_ID='list_gcs_file_names' AIRFLOW_CTX_EXECUTION_DATE='2025-06-18T15:30:01.061190+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-06-18T15:30:01.061190+00:00'
+[2025-06-18T15:30:03.458+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2025-06-18T15:30:03.549+0000] {logging_mixin.py:188} INFO - [📁 GCS 폴더 탐색]: votes/
+[2025-06-18T15:30:04.036+0000] {logging_mixin.py:188} INFO - [📄 파일 발견]: votes/accounts_attendance.parquet
+[2025-06-18T15:30:04.042+0000] {logging_mixin.py:188} INFO - [📄 파일 발견]: votes/accounts_blockrecord.parquet
+[2025-06-18T15:30:04.048+0000] {logging_mixin.py:188} INFO - [📄 파일 발견]: votes/accounts_failpaymenthistory.parquet
+[2025-06-18T15:30:04.049+0000] {logging_mixin.py:188} INFO - [📄 파일 발견]: votes/accounts_friendrequest.parquet
+[2025-06-18T15:30:04.049+0000] {logging_mixin.py:188} INFO - [📄 파일 발견]: votes/accounts_group.parquet
+[2025-06-18T15:30:04.050+0000] {logging_mixin.py:188} INFO - [📄 파일 발견]: votes/accounts_nearbyschool.parquet
+[2025-06-18T15:30:04.050+0000] {logging_mixin.py:188} INFO - [📄 파일 발견]: votes/accounts_paymenthistory.parquet
+[2025-06-18T15:30:04.051+0000] {logging_mixin.py:188} INFO - [📄 파일 발견]: votes/accounts_pointhistory.parquet
+[2025-06-18T15:30:04.051+0000] {logging_mixin.py:188} INFO - [📄 파일 발견]: votes/accounts_school.parquet
+[2025-06-18T15:30:04.052+0000] {logging_mixin.py:188} INFO - [📄 파일 발견]: votes/accounts_timelinereport.parquet
+[2025-06-18T15:30:04.052+0000] {logging_mixin.py:188} INFO - [📄 파일 발견]: votes/accounts_user.parquet
+[2025-06-18T15:30:04.053+0000] {logging_mixin.py:188} INFO - [📄 파일 발견]: votes/accounts_user_contacts.parquet
+[2025-06-18T15:30:04.053+0000] {logging_mixin.py:188} INFO - [📄 파일 발견]: votes/accounts_userquestionrecord.parquet
+[2025-06-18T15:30:04.054+0000] {logging_mixin.py:188} INFO - [📄 파일 발견]: votes/accounts_userwithdraw.parquet
+[2025-06-18T15:30:04.054+0000] {logging_mixin.py:188} INFO - [📄 파일 발견]: votes/event_receipts.parquet
+[2025-06-18T15:30:04.055+0000] {logging_mixin.py:188} INFO - [📄 파일 발견]: votes/events.parquet
+[2025-06-18T15:30:04.056+0000] {logging_mixin.py:188} INFO - [📄 파일 발견]: votes/polls_question.parquet
+[2025-06-18T15:30:04.056+0000] {logging_mixin.py:188} INFO - [📄 파일 발견]: votes/polls_questionpiece.parquet
+[2025-06-18T15:30:04.057+0000] {logging_mixin.py:188} INFO - [📄 파일 발견]: votes/polls_questionreport.parquet
+[2025-06-18T15:30:04.058+0000] {logging_mixin.py:188} INFO - [📄 파일 발견]: votes/polls_questionset.parquet
+[2025-06-18T15:30:04.059+0000] {logging_mixin.py:188} INFO - [📄 파일 발견]: votes/polls_usercandidate.parquet
+[2025-06-18T15:30:04.060+0000] {logging_mixin.py:188} INFO - [📁 GCS 폴더 탐색]: hackle_final/
+[2025-06-18T15:30:04.129+0000] {logging_mixin.py:188} INFO - [📄 파일 발견]: hackle_final/
+[2025-06-18T15:30:04.131+0000] {logging_mixin.py:188} INFO - [📄 파일 발견]: hackle_final/final.parquet
+[2025-06-18T15:30:04.132+0000] {logging_mixin.py:188} INFO - [📄 파일 발견]: hackle_final/final_hackle.parquet
+[2025-06-18T15:30:04.133+0000] {python.py:237} INFO - Done. Returned value was: None
+[2025-06-18T15:30:04.136+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2025-06-18T15:30:04.171+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=check_gcs_files_dag, task_id=list_gcs_file_names, run_id=manual__2025-06-18T15:30:01.061190+00:00, execution_date=20250618T153001, start_date=20250618T153003, end_date=20250618T153004
+[2025-06-18T15:30:04.331+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2025-06-18T15:30:04.388+0000] {taskinstance.py:3498} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-06-18T15:30:04.395+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

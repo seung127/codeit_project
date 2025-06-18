@@ -1,0 +1,36 @@
+[2025-06-18T14:56:56.149+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2025-06-18T14:56:56.175+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: load_gcs_data_dag.load_data_from_gcs manual__2025-06-18T14:56:52.539495+00:00 [queued]>
+[2025-06-18T14:56:56.186+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: load_gcs_data_dag.load_data_from_gcs manual__2025-06-18T14:56:52.539495+00:00 [queued]>
+[2025-06-18T14:56:56.186+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 2
+[2025-06-18T14:56:56.200+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): load_data_from_gcs> on 2025-06-18 14:56:52.539495+00:00
+[2025-06-18T14:56:56.217+0000] {warnings.py:110} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61: DeprecationWarning: This process (pid=43) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-06-18T14:56:56.218+0000] {standard_task_runner.py:63} INFO - Started process 45 to run task
+[2025-06-18T14:56:56.218+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'load_gcs_data_dag', 'load_data_from_gcs', 'manual__2025-06-18T14:56:52.539495+00:00', '--job-id', '7', '--raw', '--subdir', 'DAGS_FOLDER/load_gcs_data_dag.py', '--cfg-path', '/tmp/tmpec_jmjb5']
+[2025-06-18T14:56:56.221+0000] {standard_task_runner.py:91} INFO - Job 7: Subtask load_data_from_gcs
+[2025-06-18T14:56:56.276+0000] {task_command.py:426} INFO - Running <TaskInstance: load_gcs_data_dag.load_data_from_gcs manual__2025-06-18T14:56:52.539495+00:00 [running]> on host 9d2be549d26b
+[2025-06-18T14:56:56.371+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='load_gcs_data_dag' AIRFLOW_CTX_TASK_ID='load_data_from_gcs' AIRFLOW_CTX_EXECUTION_DATE='2025-06-18T14:56:52.539495+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-06-18T14:56:52.539495+00:00'
+[2025-06-18T14:56:56.373+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2025-06-18T14:56:59.250+0000] {logging_mixin.py:188} INFO - [✅ 저장 완료] gs://my-advanced_data-bucket/votes/accounts_attendance.parquet → /opt/***/data/raw/accounts_attendance.parquet
+[2025-06-18T14:57:00.449+0000] {logging_mixin.py:188} INFO - [✅ 저장 완료] gs://my-advanced_data-bucket/votes/accounts_blockrecord.parquet → /opt/***/data/raw/accounts_blockrecord.parquet
+[2025-06-18T14:57:01.232+0000] {logging_mixin.py:188} INFO - [✅ 저장 완료] gs://my-advanced_data-bucket/votes/accounts_failpaymenthistory.parquet → /opt/***/data/raw/accounts_failpaymenthistory.parquet
+[2025-06-18T14:57:19.263+0000] {logging_mixin.py:188} INFO - [✅ 저장 완료] gs://my-advanced_data-bucket/votes/accounts_friendrequest.parquet → /opt/***/data/raw/accounts_friendrequest.parquet
+[2025-06-18T14:57:20.039+0000] {logging_mixin.py:188} INFO - [✅ 저장 완료] gs://my-advanced_data-bucket/votes/accounts_group.parquet → /opt/***/data/raw/accounts_group.parquet
+[2025-06-18T14:57:20.652+0000] {logging_mixin.py:188} INFO - [✅ 저장 완료] gs://my-advanced_data-bucket/votes/accounts_nearbyschool.parquet → /opt/***/data/raw/accounts_nearbyschool.parquet
+[2025-06-18T14:57:21.272+0000] {logging_mixin.py:188} INFO - [✅ 저장 완료] gs://my-advanced_data-bucket/votes/accounts_paymenthistory.parquet → /opt/***/data/raw/accounts_paymenthistory.parquet
+[2025-06-18T14:57:23.269+0000] {logging_mixin.py:188} INFO - [✅ 저장 완료] gs://my-advanced_data-bucket/votes/accounts_pointhistory.parquet → /opt/***/data/raw/accounts_pointhistory.parquet
+[2025-06-18T14:57:23.767+0000] {logging_mixin.py:188} INFO - [✅ 저장 완료] gs://my-advanced_data-bucket/votes/accounts_school.parquet → /opt/***/data/raw/accounts_school.parquet
+[2025-06-18T14:57:24.204+0000] {logging_mixin.py:188} INFO - [✅ 저장 완료] gs://my-advanced_data-bucket/votes/accounts_timelinereport.parquet → /opt/***/data/raw/accounts_timelinereport.parquet
+[2025-06-18T14:57:33.177+0000] {logging_mixin.py:188} INFO - [✅ 저장 완료] gs://my-advanced_data-bucket/votes/accounts_user.parquet → /opt/***/data/raw/accounts_user.parquet
+[2025-06-18T14:57:33.805+0000] {logging_mixin.py:188} INFO - [✅ 저장 완료] gs://my-advanced_data-bucket/votes/accounts_user_contacts.parquet → /opt/***/data/raw/accounts_user_contacts.parquet
+[2025-06-18T14:57:35.748+0000] {logging_mixin.py:188} INFO - [✅ 저장 완료] gs://my-advanced_data-bucket/votes/accounts_userquestionrecord.parquet → /opt/***/data/raw/accounts_userquestionrecord.parquet
+[2025-06-18T14:57:36.366+0000] {logging_mixin.py:188} INFO - [✅ 저장 완료] gs://my-advanced_data-bucket/votes/accounts_userwithdraw.parquet → /opt/***/data/raw/accounts_userwithdraw.parquet
+[2025-06-18T14:57:36.826+0000] {logging_mixin.py:188} INFO - [✅ 저장 완료] gs://my-advanced_data-bucket/votes/event_receipts.parquet → /opt/***/data/raw/event_receipts.parquet
+[2025-06-18T14:57:37.323+0000] {logging_mixin.py:188} INFO - [✅ 저장 완료] gs://my-advanced_data-bucket/votes/events.parquet → /opt/***/data/raw/events.parquet
+[2025-06-18T14:57:37.871+0000] {logging_mixin.py:188} INFO - [✅ 저장 완료] gs://my-advanced_data-bucket/votes/polls_question.parquet → /opt/***/data/raw/polls_question.parquet
+[2025-06-18T14:57:39.018+0000] {logging_mixin.py:188} INFO - [✅ 저장 완료] gs://my-advanced_data-bucket/votes/polls_questionpiece.parquet → /opt/***/data/raw/polls_questionpiece.parquet
+[2025-06-18T14:57:39.647+0000] {logging_mixin.py:188} INFO - [✅ 저장 완료] gs://my-advanced_data-bucket/votes/polls_questionreport.parquet → /opt/***/data/raw/polls_questionreport.parquet
+[2025-06-18T14:57:41.017+0000] {logging_mixin.py:188} INFO - [✅ 저장 완료] gs://my-advanced_data-bucket/votes/polls_questionset.parquet → /opt/***/data/raw/polls_questionset.parquet
+[2025-06-18T14:57:43.761+0000] {logging_mixin.py:188} INFO - [✅ 저장 완료] gs://my-advanced_data-bucket/votes/polls_usercandidate.parquet → /opt/***/data/raw/polls_usercandidate.parquet
+[2025-06-18T14:58:18.318+0000] {logging_mixin.py:188} INFO - [✅ 저장 완료] gs://my-advanced_data-bucket/hackle_final/final.parquet → /opt/***/data/raw/final.parquet

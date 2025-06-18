@@ -1,0 +1,41 @@
+[2025-06-18T17:58:46.666+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2025-06-18T17:58:46.699+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: load_gcs_data_dag.load_data_from_gcs manual__2025-06-18T17:58:42.209188+00:00 [queued]>
+[2025-06-18T17:58:46.716+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: load_gcs_data_dag.load_data_from_gcs manual__2025-06-18T17:58:42.209188+00:00 [queued]>
+[2025-06-18T17:58:46.717+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 2
+[2025-06-18T17:58:46.737+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): load_data_from_gcs> on 2025-06-18 17:58:42.209188+00:00
+[2025-06-18T17:58:46.756+0000] {warnings.py:110} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61: DeprecationWarning: This process (pid=43) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-06-18T17:58:46.758+0000] {standard_task_runner.py:63} INFO - Started process 45 to run task
+[2025-06-18T17:58:46.759+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'load_gcs_data_dag', 'load_data_from_gcs', 'manual__2025-06-18T17:58:42.209188+00:00', '--job-id', '48', '--raw', '--subdir', 'DAGS_FOLDER/load_gcs_data_dag.py', '--cfg-path', '/tmp/tmprosx81jp']
+[2025-06-18T17:58:46.762+0000] {standard_task_runner.py:91} INFO - Job 48: Subtask load_data_from_gcs
+[2025-06-18T17:58:46.841+0000] {task_command.py:426} INFO - Running <TaskInstance: load_gcs_data_dag.load_data_from_gcs manual__2025-06-18T17:58:42.209188+00:00 [running]> on host 1f7594c89384
+[2025-06-18T17:58:47.046+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='load_gcs_data_dag' AIRFLOW_CTX_TASK_ID='load_data_from_gcs' AIRFLOW_CTX_EXECUTION_DATE='2025-06-18T17:58:42.209188+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-06-18T17:58:42.209188+00:00'
+[2025-06-18T17:58:47.050+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2025-06-18T17:58:47.183+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2025-06-18T17:58:47.184+0000] {taskinstance.py:2905} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 465, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 432, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 400, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 235, in execute
+    return_value = self.execute_callable()
+                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 252, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/airflow/dags/load_gcs_data_dag.py", line 27, in load_gcs_data
+    os.makedirs(RAW_DATA_PATH, exist_ok=True)
+  File "<frozen os>", line 225, in makedirs
+PermissionError: [Errno 13] Permission denied: '/opt/airflow/data/raw/'
+[2025-06-18T17:58:47.199+0000] {taskinstance.py:1206} INFO - Marking task as UP_FOR_RETRY. dag_id=load_gcs_data_dag, task_id=load_data_from_gcs, run_id=manual__2025-06-18T17:58:42.209188+00:00, execution_date=20250618T175842, start_date=20250618T175846, end_date=20250618T175847
+[2025-06-18T17:58:47.222+0000] {standard_task_runner.py:110} ERROR - Failed to execute job 48 for task load_data_from_gcs ([Errno 13] Permission denied: '/opt/airflow/data/raw/'; 45)
+[2025-06-18T17:58:47.259+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 1
+[2025-06-18T17:58:47.284+0000] {taskinstance.py:3498} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-06-18T17:58:47.287+0000] {local_task_job_runner.py:222} INFO - ::endgroup::
